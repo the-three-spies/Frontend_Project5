@@ -1,0 +1,217 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import "./style.css";
+import {
+  setNeedyCase,
+  addNeedyCase,
+  updateNeedyCase,
+  deleteNeedyCase,
+  updateActive,
+} from "../../redux/reducers/Needy";
+//---------------- The Needy ----------------
+const NeedyByUserId = () => {
+  const dispatch = useDispatch();
+  const [description, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [address, setAddress] = useState("");
+  const [things, setThings] = useState([]);
+  const [mony, setMony] = useState([]);
+
+  //useSelector
+  const { reduxaddnewneddy } = useSelector((state) => {
+    return {
+      reduxaddnewneddy: state.needy.needy,
+    };
+  });
+  const { token } = useSelector((state) => {
+    return {
+      token: state.auth.token,
+    };
+  });
+  //---------------- Set The Needy ----------------
+
+  const convertCaseUnactive = (id) => {
+    axios
+      .put(`http://localhost:5000/needycase/unactive/${id}`)
+      .then((then) => {
+        dispatch(updateActive(id));
+        console.log("hind");
+      })
+      .catch((err) => {});
+  };
+
+  // const deleteCase =(id)=>{
+
+  //   axios.delete(`http://localhost:5000/needycase/${id}`)
+  //   .then((then)=>{
+  //   const arrayMony= mony.filter((elem)=>{
+  //       return(elem.id!=id)
+  //     })
+  //   setMony(arrayMony)
+  //   })
+  //   .catch((err)=>{
+
+  //   })
+
+  // }
+
+  const deleteTingsCase = (id) => {
+    axios
+      .delete(`http://localhost:5000/needycase/${id}`)
+      .then((then) => {
+        const arrayTings = things.filter((elem) => {
+          return elem.id != id;
+        });
+        setThings(arrayTings);
+      })
+      .catch((err) => {});
+  };
+
+  const gitMoneyCaseToUser = () => {
+    axios
+      .get("http://localhost:5000/needycase/monyCase", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((result) => {
+        setMony(result.data.cases);
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const gitThingsCaseToUser = () => {
+    axios
+      .get("http://localhost:5000/needycase/thingCase", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((result) => {
+        setThings(result.data.cases);
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const diplayMoneyCaseToUser = () => {
+    //   axios
+    //       .get("http://localhost:5000/needycase/myCase", {
+    //         headers: {
+    //           Authorization: `Bearer ${token}`,
+    //         },
+    //       })
+    //       .then((result) => {
+    //         console.log("set result", result.data.cases);
+    //         // result.data.cases.title==mony?setMony.push(result.data.cases):setThings.push(result.data.cases)
+    //        dispatch(setNeedyCase(result.data.cases));
+    //         result.data.cases&&  result.data.cases.map((elm,i)=>{
+    // if(elm.title==="money"){
+    //  mony.push(elm)
+    // }else{
+    //   things.push(elm)
+    //   console.log("result.data.cases",result.data.cases[0].title)
+    // }
+    // })
+    //         console.log("mony",mony)
+    //         console.log("things",things)
+    //         console.log("get", reduxaddnewneddy);
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
+  };
+  const diplayTingsCaseToUser = () => {};
+
+  useEffect(() => {
+    gitMoneyCaseToUser();
+    gitThingsCaseToUser();
+    diplayMoneyCaseToUser();
+  }, []);
+  const navigate = useNavigate();
+  //----------------DESIGIN return DESIGIN----------------
+  return (
+    <div className="case_order_summery">
+      <h1>YOUR MONEY ORDER</h1>
+      {/* <div className="caseorder-summery-title"> YOUR MONEY ORDER </div> */}
+      {things &&
+        things?.map((element, i) => {
+          return (
+            <div className="maiDivMonyTow">
+              <div class="order_item">
+                <p className="desc_order">
+                  <span>{element.description}</span>
+                </p>
+                <p>
+                  <span>Category</span> <span>{element.title}</span>
+                </p>
+                <hr></hr>
+                <p>
+                  <span>Donation Status :</span>{" "}
+                  <span>{element.statusdonation}</span>
+                </p>
+                <hr></hr>
+                <p>
+                  <span>Adress</span> <span>{element.address}</span>
+                </p>
+                <hr></hr>
+                <p>
+                  <span> </span>{" "}
+                  <span>
+                    <button
+                      onClick={() => {
+                        deleteTingsCase(element.id);
+                      }}
+                    >
+                      <i class="bi bi-trash-fill"></i>
+                    </button>
+                  </span>
+                </p>
+              </div>
+              <div className="divImageMonynew1">
+                <img className="imgstyle" src="./assets/images/pic4.png"></img>
+              </div>
+            </div>
+          );
+        })}
+    </div>
+  );
+  //----------------DESIGIN return DESIGIN----------------
+  //---------------- return ----------------
+  // return (
+
+  //     <div className="secandMmainMonyDispayCatigory">
+
+  //     {things&& things?.map((element, i) => {
+  //       return (
+
+  //         <div className="firstthings">
+
+  //           <div>
+  //          <img className="imgCategory" src="./assets/images/pic4.png"></img>
+  //          </div>
+  //          <div>
+  //          <p> <h1>Category:{element.title}</h1>
+  //          </p>
+  //          <hr></hr>
+  //           <p className="decshowcatigory"> <h4>Description:</h4> {element.description}</p>
+
+  //           <p><h4>Status Donation:</h4> {element.statusdonation}</p>
+  //           <p><h4>Address:</h4>{element.address}</p>
+  //           <button className="ptndeletCase" onClick={()=>{deleteTingsCase(element.id)}} >Delete</button>
+  //           </div>
+  //         </div>
+  //       );
+  //     })}
+  //     </div>
+
+  // );
+};
+
+export default NeedyByUserId;

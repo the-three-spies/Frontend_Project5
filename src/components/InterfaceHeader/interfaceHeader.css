@@ -1,0 +1,61 @@
+.interface_header {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0AmH50gXqHzeDNeSG7q-wX2gnpsf-jrqXZQ&usqp=CAU")
+    no-repeat;
+  background-size: cover; /*mean 100%*/
+  width: 100%;
+  /* height: calc(
+    100vh-100px); by using method calc to Subtract the header from  background area */
+  height: 900%;
+  padding: 120px;
+  /* position: absolute; */
+}
+.interface_header_title {
+  color: white;
+  margin-top: 220px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  /* margin: 10px; */
+}
+.interface_header_title h1 {
+  font-size: 80px;
+  font-family: "shadows intro Light", sans-serif !important;
+  text-align: center;
+  top: 3px;
+  
+}
+.interface_header_title h2 {
+  margin-top: -17px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: 25px;
+  text-align: center;
+  font-weight: 400;
+  margin: 10px;
+}
+.a {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif !important;
+  position: relative !important;
+}
+.btttttttttttn {
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  padding: 10px;
+  color: #fff;
+  bottom: 4px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  position: relative;
+}
+.btttttttttttn:hover,
+.btttttttttttn:active {
+  background-color: rgb(250, 250, 250);
+  color: #000;
+  transition: background-color 0.3s ease-oui, color 0.3s ease-in;
+}
