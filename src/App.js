@@ -112,7 +112,7 @@ function App() {
 
 
 <Routes>
-
+<Route path="/" element={<><Header/><InterfaceHeader/><HomeCardCategory/><Banner/><Footer/></>}/>
 {/* <Route path="/register" element={<Register/>}></Route>  */}
 
 {/* <Route path="/login" element={<Login/>}></Route> */}
@@ -139,7 +139,7 @@ function App() {
 <Route path="/header" element={<Navbar/>}></Route>
 <Route path="/register"element={<><Register/><Footer/></>}/>
 <Route path="/login"element={<><Login/><Footer/></>}/>
-<Route path="/home" element={<><Header/><InterfaceHeader/><HomeCardCategory/><Banner/><Footer/></>}/>
+
 <Route path="/Contact"element={<><Header/><Contact/><Footer/></>}/>
 <Route path="/about"element={<><Header/><About/><Footer/></>}/>
 <Route path="/ourTeam"element={<><Header/><OurTeam/><Banner/><Services/><Footer/></>}/>
@@ -201,8 +201,8 @@ NeedyMonyByUserId
   
   </>:""
 } */}
- <Route exact path="/" element={<Navigate replace to="/home" />}>
-   </Route>
+ {/* <Route exact path="/" element={<Navigate replace to="/home" />}>
+   </Route> */}
  
  <Route path="success" element={<Success />} />
           <Route path="cancel" element={<Cancel />} />
