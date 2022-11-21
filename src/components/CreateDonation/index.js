@@ -15,7 +15,7 @@ const DonationOrder = () => {
 
   const getallCategory = async () => {
     try {
-      const result = await axios.get(`http://localhost:5000/categories`);
+      const result = await axios.get(`https://fetratinsandonationnew.onrender.com/categories`);
       if (result.data.success) {
         setdonationCategory(result.data.result);
       } else {

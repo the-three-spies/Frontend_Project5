@@ -31,7 +31,7 @@ const Navbar = ({ toggle, setToggle }) => {
   //-------------get All Category------------- set category
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/categories`)
+      .get(`https://fetratinsandonationnew.onrender.com/categories`)
       .then((result) => {
         console.log("result", result.data.result);
         dispatch(setCategory(result.data.result));

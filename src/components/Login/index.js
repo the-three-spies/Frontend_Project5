@@ -56,7 +56,7 @@ const Login = () => {
     console.log("emmmmmmmm", googleToken.email);
     console.log(googleToken, googleToken.email);
     axios
-      .post(`http://localhost:5000/register`, {
+      .post(`https://fetratinsandonationnew.onrender.com/register`, {
         firstName: googleToken.given_name,
         lastName: googleToken.family_name,
         // age:decoded.email,
@@ -75,7 +75,7 @@ const Login = () => {
           setMessage("The user has been created successfully");
 
           axios
-            .post(`http://localhost:5000/login/`, {
+            .post(`https://fetratinsandonationnew.onrender.com/login/`, {
               email: googleToken.email,
               password,
             })
@@ -126,7 +126,7 @@ const Login = () => {
 
   const getAllRoles = () => {
     axios
-      .get(`http://localhost:5000/roles`)
+      .get(`https://fetratinsandonationnew.onrender.com/roles`)
       .then((result) => {
         // console.log("result",result.data.result)
 
@@ -173,7 +173,7 @@ const Login = () => {
     console.log("poi");
 
     axios
-      .post(`http://localhost:5000/login/`, {
+      .post(`https://fetratinsandonationnew.onrender.com/login/`, {
         email,
         password,
       })
