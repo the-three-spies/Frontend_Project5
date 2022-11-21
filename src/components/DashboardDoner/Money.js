@@ -22,7 +22,7 @@ const MoneyDonationList = () => {
        //===============================================================
        const getmydonation = async () => {
         try {
-          const result = await axios.get("http://localhost:5000/dontes/myDonition", {
+          const result = await axios.get("https://fetratinsandonationnew.onrender.com/dontes/myDonition", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -41,7 +41,7 @@ const MoneyDonationList = () => {
        //==================================================================
     const getmyMoneyonation = async () => {
       try {
-        const result = await axios.get("http://localhost:5000/dontes/myDonition/money", {
+        const result = await axios.get("https://fetratinsandonationnew.onrender.com/dontes/myDonition/money", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -60,7 +60,7 @@ const MoneyDonationList = () => {
         //===============================================================
  const handeldeleted = async (id) => {
   try {
-    const result = await axios.delete(`http://localhost:5000/dontes/${id}`)
+    const result = await axios.delete(`https://fetratinsandonationnew.onrender.com/dontes/${id}`)
     if (result.data.success) {
     dispatch(deleteDonationOrder(id));
       setMessage("");

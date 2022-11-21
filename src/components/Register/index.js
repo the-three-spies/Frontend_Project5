@@ -50,7 +50,7 @@ const Register = () => {
     
 
  const getAllRoles=()=>{
-    axios.get(`http://localhost:5000/roles`).
+    axios.get(`https://fetratinsandonationnew.onrender.com/roles`).
     then((result)=>{
 //console.log("result",result.data.result)
 
@@ -64,7 +64,7 @@ setRoles(result.data.result)
 
 const AddNewUse=()=>{
 
-    axios.post(`http://localhost:5000/register`, {
+    axios.post(`https://fetratinsandonationnew.onrender.com/register`, {
         firstName,
         lastName,
         age,
@@ -81,7 +81,7 @@ if (result.data.success) {
 
 
     axios
-    .post(`http://localhost:5000/login/`, {
+    .post(`https://fetratinsandonationnew.onrender.com/login/`, {
       email,
       password,
     })

@@ -90,7 +90,7 @@ const AddNeedy2 = ({ id }) => {
     try {
       console.log("asdfghjkl");
       const result = await axios.post(
-        "http://localhost:5000/needycase",
+        "https://fetratinsandonationnew.onrender.com/needycase",
         {
           description,
           category_id: CategoryId,
@@ -129,7 +129,7 @@ const AddNeedy2 = ({ id }) => {
   const handleDleteNeedy = () => {
     console.log("");
     axios
-      .delete(`http://localhost:5000/needycase/${id}`)
+      .delete(`https://fetratinsandonationnew.onrender.com/needycase/${id}`)
       .then((result) => {
         console.log(result);
         dispatch(

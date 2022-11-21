@@ -17,7 +17,7 @@ const [data,setdata]=useState([]);
  const getNumdonateCase = async () => {
 
   try {
-    const result = await axios.get(`http://localhost:5000/admin/numorderDonation`);
+    const result = await axios.get(`https://fetratinsandonationnew.onrender.com/admin/numorderDonation`);
     if (result.data.success) {
       // setdata(result.data.result);
       // console.log(result.data.result)
