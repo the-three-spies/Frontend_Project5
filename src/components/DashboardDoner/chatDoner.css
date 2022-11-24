@@ -1,0 +1,55 @@
+.ourstory-body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    font-family: "Open Sans",sans-serif;
+}
+.ourchat_section{
+    background: url("https://res.cloudinary.com/dv3wzcjeh/image/upload/v1669218270/chat11_s6vwxx.png") no-repeat left;
+    /*./assets/images/chat.png*/
+    background-size: 55%; /*-----55*/
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 64px 0;
+}
+.ourchat_inner_container{
+    width: 50%;
+    /* height: 100%; */
+    float: right;
+    /* background-color: #F9efe3; */
+    background: url("https://res.cloudinary.com/dv3wzcjeh/image/upload/v1669219237/chat16_qaagva.png");
+    padding: 100px;
+}
+.ourStory-values{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 15px;
+}
+/* Media Queries*/
+@media(max-width:1200px){
+    .ourchat_inner_container{
+        padding: 80px;
+    }
+}
+@media(max-width:1000px){
+    .ourchat_section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .ourchat_inner_container{
+        width: 100%;
+    }
+}
+@media(max-width:600px){
+    .ourchat_section{
+        padding: 0;
+    }
+    .ourStory-inner-container{
+        padding: 60px;
+    }
+}
+
+

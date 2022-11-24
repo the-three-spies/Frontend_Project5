@@ -89,7 +89,7 @@ cat()
     try {
       console.log("asdfghjkl");
       const result = await axios.post(
-        "https://fetratinsandonationnew.onrender.com/needycase",
+        "http://localhost:5000/needycase",
         {
           description,
           category_id: CategoryId,
@@ -131,7 +131,7 @@ cat()
   const handleDleteNeedy = () => {
     console.log("");
     axios
-      .delete(`https://fetratinsandonationnew.onrender.com/needycase/${id}`)
+      .delete(`http://localhost:5000/needycase/${id}`)
       .then((result) => {
         console.log(result);
         dispatch(

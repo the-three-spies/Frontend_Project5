@@ -16,9 +16,9 @@
       monospace;
   }
   
-  .checkout {
+  /* .checkout {
     padding-top: 10px;
-  }
+  } */
   
   .checkout-title {
     font-style: normal;
@@ -50,9 +50,9 @@
     color: rgba(0, 0, 0, 0.7);
   }
   
-  .checkout-product-image {
+  /* .checkout-product-image {
     width: 400px;
-  }
+  } */
   
   .checkout-button {
     background: linear-gradient(180deg, #ffffff 0%, #d9dfff 100%);
@@ -129,4 +129,52 @@
     color: rgba(0, 0, 0, 1);
     margin: 0;
   }
-  
+  /*checkot*/
+  .checkout_body{
+    min-height: 80vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-family: "Open Sans",sans-serif;
+  }
+  .checkout_section{
+    background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/s93-pm-2757_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=05795ca7e68606242e2dd767860cfacb") no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+    height: 80vh;
+  }
+  .checkout{
+    width: 48%;
+    float: right;
+    background-color: #efefef;
+    padding: 80px;
+  }
+
+  .checkout h1{
+    color: #908384;
+    text-align: center;
+    /* font-size: 35px; */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #545454;
+    font-family: poppins;
+  }
+  .checkout p{
+    text-align: center;
+    /* font-size: 35px; */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-family: poppins;
+  }
+  /* .checkout-button{
+    background: #000;
+  } */

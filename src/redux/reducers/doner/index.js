@@ -2,21 +2,23 @@ import { createSlice } from "@reduxjs/toolkit";
 const donerSlice=createSlice({
     name:"donation",
     initialState:{
-        donation:[],
+        dontionthings :[],
+        moneyDonation:[],
         cateagory:[]
+
     },
     reducers:{
-        setDonationOrder:(state,action)=>
+        setDonationThing:(state,action)=>
         {
-            state.donation=action.payload
+            state.dontionthings=action.payload
         },
-        addDonationOrder:(state,action)=>
+        addDonationThingOrder:(state,action)=>
         {
             state.donation.push(action.payload)
         },
-        updatDonationOrder:(state,action)=>
+        updatDonationThingOrder:(state,action)=>
         {
-            state.donation=state.donation.map((element,i)=>
+            state.dontionthings=state.dontionthings.map((element,i)=>
             {
                 if( element.id===action.payload.id)
                 {
@@ -29,36 +31,35 @@ const donerSlice=createSlice({
             })
 
         },
-        deleteDonationOrder:(state,action)=>
+        deletethingOrder:(state,action)=>
         {
-            state.donation=state.donation.filter((element,i)=>
+            state.dontionthings=state.dontionthings.filter((element,i)=>
             {
                 return element.id !== action.payload;
             })
-        },
-        setNeedcase:(state,action)=>
+       
+    },
+    setDonationMoney:(state,action)=>
         {
-            state.donation=action.payload
+            state.moneyDonation=action.payload
         },
-        setIDCateogory:(state,action)=>
+        addDonationMoneyOrder:(state,action)=>
         {
-            state.cateagory=action.payload
+            state.moneyDonation.push(action.payload)
         },
-        setMoneyDonation:(state,action)=>
+        deleteMoneyoderr:(state,action)=>
         {
-            state.donation=state.donation.filter((element,i)=>
+            state.moneyDonation=state.moneyDonation.filter((element,i)=>
             {
-                return element.category_id=='3'
+                return element.id !== action.payload;
             })
-        },
-        setMaterialDonation:(state,action)=>
-        {
-            state.donation=state.donation.filter((element,i)=>
-            {
-                return element.category_id!=='3'
-            })
-        },
-    }
+       
+    },
+    setIDCateogory:(state,action)=>
+    {
+        state.cateagory=action.payload
+    },
+}
 })
-export const {setDonationOrder,addDonationOrder,updatDonationOrder,deleteDonationOrder,setMoneyDonation,setIDCateogory,setMaterialDonation}=donerSlice.actions
+export const {setDonationThing,addDonationThingOrder,updatDonationThingOrder,deletethingOrder,setDonationMoney,addDonationMoneyOrder,deleteMoneyoderr,setIDCateogory}=donerSlice.actions
 export default donerSlice.reducer

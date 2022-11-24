@@ -34,11 +34,12 @@ const Header = () => {
     const showLoginLogoutHandler = () => {
       setShowLoginLogout((prev) => !prev);
     };
-  //------------- return -------------
+  //------------- return -------------https://pledgeling-res.cloudinary.com/image/upload/c_lpad,h_144,w_144/v1/shared/about/values/care.png
   return ( //1.header //2.navbar //3.change the nav to list menu for resopnsive desigin
     <header className="header">
 <div className="logo">
       <img src= 'https://res.cloudinary.com/dqsg0zf1r/image/upload/v1668184372/project5/fitrat_iNsan22_x8fcjb.png'  alt="img" className="logo-img"/>
+      {/* <img src= 'https://pledgeling-res.cloudinary.com/image/upload/c_lpad,h_144,w_144/v1/shared/about/values/care.png'  alt="img" className="logo-img"/> */}
       <div className="logo-text">
         <Link to="/home" className="header-middle-logo">
         <b>Fitrat</b>
@@ -50,12 +51,12 @@ const Header = () => {
       <nav style={{clipPath: toggle && "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }} className="navbar">
         <ul className="navbar-links">
         {/* <Link to="/Showcategories" className="navbar-link" onClick={()=>{setToggle(false)}}>Category</Link> */}
-        <Link to="/contact" className="navbar-link" onClick={()=>{setToggle(false)}}>Contact Us</Link>
-        <Link to="/about" className="navbar-link" onClick={()=>{setToggle(false)}}>About Us</Link>
+        <Link to="/about" className="navbar-link" onClick={()=>{setToggle(false)}}>About</Link>
         <Link to="/ourStory" className="navbar-link" onClick={()=>{setToggle(false)}}>Our Story</Link>
-        <Link to="/ourTeam" className="navbar-link" onClick={()=>{setToggle(false)}}>Our Team</Link>
         <Link to="/FAQs" className="navbar-link" onClick={()=>{setToggle(false)}}>FAQs</Link>
-        <Link to="/ApiPag" className="navbar-link" onClick={()=>{setToggle(false)}}>Api Pag</Link>
+        <Link to="/contact" className="navbar-link" onClick={()=>{setToggle(false)}}>Contact</Link>
+        <Link to="/ApiPag" className="navbar-link" onClick={()=>{setToggle(false)}}>Buy</Link>
+        {/* <Link to="/ourTeam" className="navbar-link" onClick={()=>{setToggle(false)}}>Our Team</Link> */}
           {/* <li onClick={()=>{setToggle(false)}} className="navbar-link">FAQs</li> */}
         </ul>
       </nav>
@@ -71,7 +72,7 @@ const Header = () => {
             Register
           </Link>
         </div>
-: <div> <Link to="/login" onClick={()=>{ dispacth(setLogout())}} > Logout</Link></div>}
+: <div> <Link to="/login" onClick={()=>{ dispacth(setLogout())}} className="logout" > Logout</Link></div>}
       <div onClick={()=> setToggle(prev=>!prev)} className="header-menu">
         {toggle ?<i className="bi bi-x-lg"></i>: <i className="bi bi-list"></i>}
       </div>

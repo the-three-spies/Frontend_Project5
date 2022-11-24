@@ -1,0 +1,104 @@
+
+.donate_MaterialOrder_summery{
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: start;
+}
+.donate_MaterialOrder_summery h1{
+    /* position: relative; */
+    margin-top: 50px;
+  left: 30%;
+  color: #545454;
+}
+.mmaapp{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    /* align-items: center; */
+    padding-top: 60px;
+    position: relative;
+    width: 90%;
+    float: left;
+    height: 10%;
+    z-index: 1010101010
+}
+.material_box{
+    /* height: 50vh;
+    width: 25%; */
+ text-align: center;
+ padding: 20px 20px;
+ color: #fff;
+ position: relative;
+ border-radius: 20px;
+ flex: 25%;
+ margin: 2% 5%;
+ /* padding: 19px; */
+ border-radius: 5px;
+ /* background: linear-gradient(45deg,#fbda61,#FF5757); */
+ box-shadow: rgba(100, 100, 111, 0.2)0 7px 29px 0;
+ background: #efefef;
+}
+.material_box .edit_donate{
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    color: #545454;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    font-weight: 900;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.material_box .delete_donate{
+    width: 30px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    color: crimson;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    font-weight: 900;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.material_box .img_donate_img{
+    width: 150px;
+    border-radius: 10%;
+    background: #fff;
+    /* padding: 6px;
+    margin-top: 40px; */
+    height: 125px;
+}
+.material_box h3{
+    margin: 3px;
+    color: #545454;
+    font-weight: bold;
+}
+.material_box p{
+    margin: 3px;
+    font-size: 20px;
+    color: #545454;
+    font-weight: bold;
+
+}
+.material_box input{
+    margin: 3px;
+    border: none;
+}
+.material_box .udateDatedonate{
+    background: #fff;
+    border: none;
+}
+/*Chat Doner*/

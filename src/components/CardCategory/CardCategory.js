@@ -26,7 +26,7 @@ const CardCategory = () => {
   //---------------- setCategory ----------------
   useEffect(() => {
     axios
-      .get(`https://fetratinsandonationnew.onrender.com/categories`)
+      .get(`http://localhost:5000/categories`)
       .then((result) => {
         console.log("result", result.data.result);
         dispatch(setCategory(result.data.result));

@@ -51,7 +51,7 @@ const Navigation = () => {
     <Link to="/donate" className="navbar-link"> Donate Now</Link> 
    <Link to="/mythingdonation" className="navbar-link"> My in-kind donations</Link> 
  <Link to="/mymonydonation" className="navbar-link">My cash donations</Link>
- <Link to="/NewSoct" className="navbar-link">Chat </Link>
+ <Link to="/myChat" className="navbar-link">Chat</Link>
 
  </div>:""
    }

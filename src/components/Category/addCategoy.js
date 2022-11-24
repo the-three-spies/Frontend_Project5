@@ -19,7 +19,7 @@ const AddCategory = () => {
   //---------------- handleAddCategory ----------------
   const handleAddCategory = () => {
     axios
-      .post(`https://fetratinsandonationnew.onrender.com/categories`, {
+      .post(`http://localhost:5000/categories`, {
         title,
         imgePath,
       })

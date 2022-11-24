@@ -11,6 +11,7 @@ const FAQs = () => {
         setSelected(i)
     }
   return (
+
     <div className="FAQs-wrapper">
       <div className="FAQs-map-title-answer">
         {data.map((item,i)=>(
@@ -28,25 +29,25 @@ const FAQs = () => {
 };
 const data = [
   {
-    question: "Fitrat Insan",
+    question:"What is Fitrat Insan?",
     answer: "Fitrat Insan is now an innovation project and we wish to goes on it. ",
   },
   {
-    question: "Where did the idea for Fitrat Insan originate from?",
-    answer: `The starting point for Fitrat Insan is that it is very inexpensive to help one needy for a day. `,
+    question:"Where did the idea originate from?",
+    answer:`The starting point for Fitrat Insan is that it is very inexpensive to help one needy for a day. `,
 
   },
   {
-    question: "How did you believe on it?",
-    answer: "We believe even more people would be willing to help if there was a simple and straightforward way of doing so. This is where the FitratInsan app comes.",
+    question:"How did you believe on it?",
+    answer:"We believe even more people would be willing to help if there was a simple and straightforward way of doing so. This is where the FitratInsan app comes.",
   },
   {
-    question: "Who are the members of this idea",
-    answer: "Hind,Walaa and Aseel founded Fitrat Insan in November 2022 in Meraki Acadmey. A large number of voluntary and doner supporters were essential to the further development of Fitrat Insan.",
+    question:"Who are the members of this idea",
+    answer: "Hind,Walaa and Aseel founded Fitrat Insan.",
   },
   {
-    question: "Question 5",
-    answer: "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ",
+    question:"when did it apear",
+    answer:"in November 2022 in Meraki Acadmey.",
   },
 ];
 export default FAQs;
