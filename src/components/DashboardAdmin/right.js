@@ -11,7 +11,7 @@ const Array=[{title:'add Case At NeedyCase Table'},{title:'add Donation Order At
 //===============================================================
 const infoUpdate = async () => {
   try {
-      const result = await (axios.get(`http://localhost:5000/admin/update`
+      const result = await (axios.get(`https://fetratinsandonationnewl.onrender.com/admin/update`
       ))
       if (result.data.success) {
         const Date=Array.map((e,i)=>

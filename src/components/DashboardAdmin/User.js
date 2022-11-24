@@ -10,7 +10,7 @@ const [status, setStatus] = useState(false);
 //===============================================================
 const infoUser = async () => {
   try {
-      const result = await (axios.get(`http://localhost:5000/admin/user`
+      const result = await (axios.get(`https://fetratinsandonationnewl.onrender.com/admin/user`
       ))
       if (result.data.success) {
           setUser(result.data.result)

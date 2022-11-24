@@ -13,7 +13,7 @@ const Donation = () => {
 
   const allDonationOrder = async () => {
     try {
-      const result = await axios.get(`http://localhost:5000/dontes`);
+      const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/dontes`);
       if (result.data.success) {
         setdonationOrder(result.data.result);
         setStatus(true);
@@ -33,7 +33,7 @@ const Donation = () => {
 
   const confirmDelivery = async (id) => {
     try {
-      const result = await axios.put(`http://localhost:5000/dontes/confirm/${id}`);
+      const result = await axios.put(`https://fetratinsandonationnewl.onrender.com/dontes/confirm/${id}`);
       if (result.data.success) {
         const data=donationOrder.filter((e,i)=>
         {

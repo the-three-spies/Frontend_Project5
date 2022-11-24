@@ -27,7 +27,7 @@ const [status, setStatus] = useState(false);
  const getStateMonth= async () => {
 
   try {
-    const result = await axios.get(`http://localhost:5000/admin/state`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/state`);
     if (result.data.success) {
  
       const newState=dataArray.map((e,index)=>

@@ -64,7 +64,7 @@ const Material = () => {
   const getallNeedCase = async (id) => {
     try {
       const result = await axios.get(
-        `http://localhost:5000/needycase/needyCategory/${id}`
+        `https://fetratinsandonationnewl.onrender.com/needycase/needyCategory/${id}`
       );
 
       if (result.data.cases) {
@@ -102,7 +102,7 @@ const Material = () => {
       };
     try {
       const result = await axios.post(
-        `http://localhost:5000/dontes`,
+        `https://fetratinsandonationnewl.onrender.com/dontes`,
         information,
 
         {

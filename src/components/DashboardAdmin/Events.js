@@ -18,7 +18,7 @@ const Events = () => {
   const senInvitation = async () => {
   try {
     const result = await axios.post(
-      `http://localhost:5000/email/invitation`,date,{
+      `https://fetratinsandonationnewl.onrender.com/email/invitation`,date,{
         headers: {
           Authorization: `Bearer ${token}`,
         }});
@@ -43,7 +43,7 @@ const Events = () => {
   const sendthanks = async () => {
     try {
       const result = await axios.post(
-        `http://localhost:5000/email/thanks`,date,{
+        `https://fetratinsandonationnewl.onrender.com/email/thanks`,date,{
           headers: {
             Authorization: `Bearer ${token}`,
           }});

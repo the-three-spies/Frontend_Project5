@@ -17,7 +17,7 @@ const [data,setdata]=useState([]);
  const getNumActivCase = async () => {
 
   try {
-    const result = await axios.get(`http://localhost:5000/admin/numberofActiv`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/numberofActiv`);
     if (result.data.success) {
    
         const newdata=result.data.result.map((e,i)=>

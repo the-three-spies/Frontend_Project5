@@ -37,7 +37,7 @@ const NeedyMonyByUserId = () => {
 
 // const convertCaseUnactive=(id)=>{
 
-// axios.put(`http://localhost:5000/needycase/unactive/${id}`)
+// axios.put(`https://fetratinsandonationnewl.onrender.com/needycase/unactive/${id}`)
 // .then((then)=>{
 //   dispatch(updateActive(id))
 // //console.log("hind")
@@ -51,7 +51,7 @@ const NeedyMonyByUserId = () => {
 
   const deleteCase =(id)=>{
 
-    axios.delete(`http://localhost:5000/needycase/${id}`)
+    axios.delete(`https://fetratinsandonationnewl.onrender.com/needycase/${id}`)
     .then((then)=>{
     const arrayMony= mony.filter((elem)=>{
         return(elem.id!=id)
@@ -69,7 +69,7 @@ const NeedyMonyByUserId = () => {
 
   // const deleteTingsCase =(id)=>{
 
-  //   axios.delete(`http://localhost:5000/needycase/${id}`)
+  //   axios.delete(`https://fetratinsandonationnewl.onrender.com/needycase/${id}`)
   //   .then((then)=>{
   //   const arrayTings= mony.filter((elem)=>{
   //       return(elem.id!=id)
@@ -85,7 +85,7 @@ const NeedyMonyByUserId = () => {
   const gitMoneyCaseToUser=()=>{
   
     axios
-      .get("http://localhost:5000/needycase/monyCase", {
+      .get("https://fetratinsandonationnewl.onrender.com/needycase/monyCase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -103,7 +103,7 @@ const NeedyMonyByUserId = () => {
 
 
     axios
-      .get("http://localhost:5000/needycase/thingCase", {
+      .get("https://fetratinsandonationnewl.onrender.com/needycase/thingCase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

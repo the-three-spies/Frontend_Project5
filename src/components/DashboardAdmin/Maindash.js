@@ -15,7 +15,7 @@ const Maindashboard = () => {
     const [status, setStatus] = useState(false);
     const lastOrderForNeedy = async () => {
         try {
-            const result = await (axios.get(`http://localhost:5000/admin/lastcase`
+            const result = await (axios.get(`https://fetratinsandonationnewl.onrender.com/admin/lastcase`
             ))
             if (result.data.success) {
                 setneedyCase(result.data.result);
@@ -35,7 +35,7 @@ const Maindashboard = () => {
     //===============================================================
     const countinfo = async () => {
         try {
-            const result = await (axios.get(`http://localhost:5000/admin/counter`
+            const result = await (axios.get(`https://fetratinsandonationnewl.onrender.com/admin/counter`
             ))
             if (result.data.success) {
                 setCounter(Object.values(result.data.result))

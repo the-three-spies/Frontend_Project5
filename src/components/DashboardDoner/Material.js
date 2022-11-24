@@ -27,7 +27,7 @@ const MaterialDonation = () => {
   // const getmydonation = async () => {
   //   try {
   //     const result = await axios.get(
-  //       "http://localhost:5000/dontes/myDonition",
+  //       "https://fetratinsandonationnewl.onrender.com/dontes/myDonition",
   //       {
   //         headers: {
   //           Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const MaterialDonation = () => {
   const getmyMatieraldonation = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:5000/dontes/myDonition/material",
+        "https://fetratinsandonationnewl.onrender.com/dontes/myDonition/material",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ const MaterialDonation = () => {
   //===============================================================
   const handleupdatedate = async (id) => {
     try {
-      const result = await axios.put(`http://localhost:5000/dontes/${id}`, {
+      const result = await axios.put(`https://fetratinsandonationnewl.onrender.com/dontes/${id}`, {
         deleveryDate: newdate,
       });
       if (result.data.success) {
@@ -90,7 +90,7 @@ const MaterialDonation = () => {
   //===============================================================
   const handeldeleted = async (id) => {
     try {
-      const result = await axios.delete(`http://localhost:5000/dontes/${id}`);
+      const result = await axios.delete(`https://fetratinsandonationnewl.onrender.com/dontes/${id}`);
       if (result.data.success) {
         dispatch(deletethingOrder(id))
         setMessage("");

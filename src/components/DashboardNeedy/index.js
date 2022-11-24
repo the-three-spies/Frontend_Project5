@@ -29,7 +29,7 @@ const TheNeedy = () => {
   useEffect(() => {
     console.log("gdfsdd", CategoryId);
     axios
-      .get("http://localhost:5000/needycase")
+      .get("https://fetratinsandonationnewl.onrender.com/needycase")
       .then((result) => {
         console.log("set result", result.data.result);
         dispatch(setNeedyCase(result.data.result));

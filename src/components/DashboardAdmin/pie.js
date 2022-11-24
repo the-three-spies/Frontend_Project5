@@ -15,7 +15,7 @@ const [data,setdata]=useState([]);
  const getNumNeedCase = async () => {
 
   try {
-    const result = await axios.get(`http://localhost:5000/admin/numcase`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/numcase`);
     if (result.data.success) {
 
       //add change 

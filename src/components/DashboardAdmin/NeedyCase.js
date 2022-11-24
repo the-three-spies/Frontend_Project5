@@ -13,7 +13,7 @@ const NeedyCase = () => {
 
       const allNeedyCase = async () => {
         try {
-            const result = await (axios.get(`http://localhost:5000/needycase`
+            const result = await (axios.get(`https://fetratinsandonationnewl.onrender.com/needycase`
             ))
             if (result.data.success) {
                setneedyCase(result.data.result)
@@ -34,7 +34,7 @@ const NeedyCase = () => {
     const searchInCase = async () => {
 
       try {
-        const result = await axios.get(`http://localhost:5000/admin/search_2?name=${search}`);
+        const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/search_2?name=${search}`);
         if (result.data.success) {
 setneedyCase(result.data.result)  
  setStatus(true);
