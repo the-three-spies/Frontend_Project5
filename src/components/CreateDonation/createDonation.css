@@ -1,0 +1,248 @@
+.container_donate{
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(45deg,#fbda61,#FF5757); */
+    /* padding-top: 175px; */
+background: #efefef;
+}
+.map{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    padding-top: 150px;
+    row-gap: 10vh;
+
+    position: relative;
+    width: 75%;
+    float: left;
+    height: 100%;
+    /* background-color: #282828; */
+    z-index: 1010101010
+}
+
+/*------------start pt2 in money--------------*/
+.part22{
+    position: fixed;
+    width: 25%;
+    float: left;
+    height: 100%;
+    /* background-color: #fff; */
+    z-index: 1010101010;
+    top: 0;
+    right: 0;
+    left: -3;
+    bottom: 0;
+    margin-top: 300px;
+    align-items: flex-start;
+    justify-content: start;
+}
+.cardpt2_forDonate{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    /* background: #fff; */
+    /* background: linear-gradient(45deg,#fbda61,#FF5757); */
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(92, 38, 95, 0.15);
+    transition: 0.5s;
+    padding: 20px;
+    align-items: flex-start;
+}
+.info_donate{
+    margin: 10px;
+}
+.info_donate label{
+    font-weight: bold;
+    margin-right: 10px;
+}
+.info_donate input{
+    background: #e0a0a0   ;
+    width: 100px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.info_donate .change{
+    height: 30px;
+    width: 216px;
+}
+.chosecasebtn2_donate{
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+.chosecasebtn2_donate button
+{
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px ; /*1em*/
+    font-weight: 500;
+    background: #e0a0a0;
+    color: #fff;
+    cursor: pointer;
+}
+.cardpt2material_forDonate{
+    align-items: stretch;
+    position: relative;
+    width: 350px;
+    /* height: 250px; */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+    padding: 20px;
+    /* box-shadow:rgba(199, 140, 140, 0.5); */
+    
+}
+.chooseImg_donate{
+    display: flex;
+    justify-content: right;
+    margin-top: 5px;
+    background: #000;
+}
+.chooseImg_donate button
+{
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px ; /*1em*/
+    font-weight: 500;
+    background: #e0a0a0;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.info_donate input {
+    margin-top: 3px;
+}
+
+
+/* ---------------END pt2 in money--------------- */
+.card_forDonate{
+    position: relative;
+    width: 350px;
+    height: 390px; /* 190||490||390 if we dont need hover just take the hover height and replace it here that will stop the hover animation dont forgrt to remove the height from the hover to stop it*/
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(63, 6, 6, 0.15);
+    transition: 0.5s;
+    /* margin-bottom: 7px; */
+}
+.card_forDonate:hover{
+    height: 450px;
+}
+.img_donate{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(106, 94, 94, 0.35);
+    overflow: hidden; /*radius*/
+    transition: 0.5s;
+    z-index: 1000;
+}
+.card_forDonate:hover .img_donate{ /* if u dont foucs on img remove it*/
+    width: 250px;
+    height: 250px;
+}
+.img_donate img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:90%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+.card_forDonate .infocard_donate{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* background: linear-gradient(45deg,#aaa4a4,#efefef); */
+    /* background: #efefef; */
+    /* overflow: hidden;  */
+    /*suggest to remove*/
+}
+.card_forDonate .infocard_donate .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    /* transform: translateY(150px); */
+    /* suggest to remove*/
+}
+/* suggest to remove*/
+/* .card_forDonate:hover .infocard_donate .details{ 
+    transform: translateY(0px);
+} */
+.card_forDonate .infocard_donate .details h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.card_forDonate .infocard_donate .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.card_forDonate .infocard_donate .details .data_donate{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card_forDonate .infocard_donate .details .data_donate h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card_forDonate .infocard_donate .details .data_donate h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.card_forDonate .infocard_donate .details .chosecasebtn_donate{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card_forDonate .infocard_donate .details .chosecasebtn_donate button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #e0a0a0;
+    color: #fff;
+    cursor: pointer;
+}
+.card_forDonate .infocard_donate .details .chosecasebtn_donate button:nth-child(2){
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+Link{
+    text-decoration: none !important;
+}
+.true{
+    background-color: rgb(33, 224, 74);
+  }
+ 

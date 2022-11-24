@@ -10,15 +10,17 @@ import {
   deleteNeedyCase,
   updateActive,
 } from "../../redux/reducers/Needy";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 //---------------- The Needy ----------------
 const NeedyByUserId = () => {
   const dispatch = useDispatch();
-  const [description, setTitle] = useState("");
-  const [amount, setAmount] = useState("");
-  const [address, setAddress] = useState("");
+  // const [description, setTitle] = useState("");
+  // const [amount, setAmount] = useState("");
+  // const [address, setAddress] = useState("");
   const [things, setThings] = useState([]);
   const [mony, setMony] = useState([]);
-
+  const [toasboolean,setTtoasboolean]=useState(false)
   //useSelector
   const { reduxaddnewneddy } = useSelector((state) => {
     return {
@@ -34,17 +36,17 @@ const NeedyByUserId = () => {
 
   const convertCaseUnactive = (id) => {
     axios
-      .put(`https://fetratinsandonationnew.onrender.com/needycase/unactive/${id}`)
+      .put(`https://fetratinsandonationnewl.onrender.com/needycase/unactive/${id}`)
       .then((then) => {
         dispatch(updateActive(id));
-        console.log("hind");
+       // console.log("hind");
       })
       .catch((err) => {});
   };
 
   // const deleteCase =(id)=>{
 
-  //   axios.delete(`https://fetratinsandonationnew.onrender.com/needycase/${id}`)
+  //   axios.delete(`https://fetratinsandonationnewl.onrender.com/needycase/${id}`)
   //   .then((then)=>{
   //   const arrayMony= mony.filter((elem)=>{
   //       return(elem.id!=id)
@@ -59,8 +61,10 @@ const NeedyByUserId = () => {
 
   const deleteTingsCase = (id) => {
     axios
-      .delete(`https://fetratinsandonationnew.onrender.com/needycase/${id}`)
+      .delete(`https://fetratinsandonationnewl.onrender.com/needycase/${id}`)
       .then((then) => {
+        toast.success("Deleted successfully")
+        setTtoasboolean(true)
         const arrayTings = things.filter((elem) => {
           return elem.id != id;
         });
@@ -71,14 +75,14 @@ const NeedyByUserId = () => {
 
   const gitMoneyCaseToUser = () => {
     axios
-      .get("https://fetratinsandonationnew.onrender.com/needycase/monyCase", {
+      .get("https://fetratinsandonationnewl.onrender.com/needycase/monyCase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((result) => {
         setMony(result.data.cases);
-        console.log(result);
+       // console.log(result);
       })
       .catch((err) => {
         console.log(err);
@@ -86,14 +90,14 @@ const NeedyByUserId = () => {
   };
   const gitThingsCaseToUser = () => {
     axios
-      .get("https://fetratinsandonationnew.onrender.com/needycase/thingCase", {
+      .get("https://fetratinsandonationnewl.onrender.com/needycase/thingCase", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((result) => {
         setThings(result.data.cases);
-        console.log(result);
+       // console.log(result);
       })
       .catch((err) => {
         console.log(err);
@@ -102,7 +106,7 @@ const NeedyByUserId = () => {
 
   const diplayMoneyCaseToUser = () => {
     //   axios
-    //       .get("https://fetratinsandonationnew.onrender.com/needycase/myCase", {
+    //       .get("https://fetratinsandonationnewl.onrender.com/needycase/myCase", {
     //         headers: {
     //           Authorization: `Bearer ${token}`,
     //         },
@@ -138,12 +142,14 @@ const NeedyByUserId = () => {
   //----------------DESIGIN return DESIGIN----------------
   return (
     <div className="case_order_summery">
-      <h1>YOUR MONEY ORDER</h1>
+      <ToastContainer/>
+      <h1>YOUR MATERIAL ORDER</h1>
       {/* <div className="caseorder-summery-title"> YOUR MONEY ORDER </div> */}
       {things &&
         things?.map((element, i) => {
           return (
-            <div className="maiDivMonyTow">
+            <div key={`maiDivMonyTow${i}`} className="maiDivMonyTow">
+              
               <div class="order_item">
                 <p className="desc_order">
                   <span>{element.description}</span>
@@ -169,7 +175,7 @@ const NeedyByUserId = () => {
                         deleteTingsCase(element.id);
                       }}
                     >
-                      <i class="bi bi-trash-fill"></i>
+                      <i className={toasboolean === false ? "bi bi-trash-fill" : "bi bi-trash-fill newbi-trash-fill"} ></i>
                     </button>
                   </span>
                 </p>

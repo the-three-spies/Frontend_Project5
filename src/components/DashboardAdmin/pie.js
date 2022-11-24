@@ -15,7 +15,7 @@ const [data,setdata]=useState([]);
  const getNumNeedCase = async () => {
 
   try {
-    const result = await axios.get(`https://fetratinsandonationnew.onrender.com/admin/numcase`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/numcase`);
     if (result.data.success) {
 
       //add change 
@@ -51,6 +51,7 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
+ <span> All Needy Cases By Section</span>
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -87,6 +88,7 @@ useEffect(() => {
       },
     ]}
   />
+
   </div>
 
 );

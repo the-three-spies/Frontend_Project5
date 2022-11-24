@@ -1,6 +1,6 @@
 .ourstory-body{
     min-height: 100vh;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     background-color: #f1f1f1;
@@ -11,7 +11,7 @@
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 84px 0;
 }
 .ourStory-inner-container{
     width: 55%;

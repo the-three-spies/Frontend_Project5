@@ -83,7 +83,7 @@
     font-size: 1.4em;
 }
 .card:hover{
-    background: linear-gradient(#6E726D,#BFB8B7) ;/*(#6045ea,#8567f7);*/
+    background: linear-gradient(#BFB8B7,#BFB8B7) ;/*(#6045ea,#8567f7);*/
     color: #ffffff;
 }
 .card:hover .img-container {

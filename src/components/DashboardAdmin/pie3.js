@@ -17,7 +17,7 @@ const [data,setdata]=useState([]);
  const getNumActivCase = async () => {
 
   try {
-    const result = await axios.get(`https://fetratinsandonationnew.onrender.com/admin/numberofActiv`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/numberofActiv`);
     if (result.data.success) {
    
         const newdata=result.data.result.map((e,i)=>
@@ -50,6 +50,7 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
+  <span> State Status of requests fulfilled</span>
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}

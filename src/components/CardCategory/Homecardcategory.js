@@ -26,7 +26,7 @@ const HomeCardCategory = () => {
   //---------------- setCategory ----------------
   useEffect(() => {
     axios
-      .get(`https://fetratinsandonationnew.onrender.com/categories`)
+      .get(`https://fetratinsandonationnewl.onrender.com/categories`)
       .then((result) => {
         console.log("result", result.data.result);
         dispatch(setCategory(result.data.result));

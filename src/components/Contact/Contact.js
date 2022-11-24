@@ -1,80 +1,118 @@
 import "./contact.css";
 import Header from "../Header/header";
-import Footer from '../Footer/Footer'
-
+import Footer from "../Footer/Footer";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { BsEmojiAngryFill } from "react-icons/bs";
-// import { ToastContainer, toast } from 'react-toastify'; 
-// import 'react-toastify/dist/ReactToastify.css';
-
-
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log({name,
+    email,
+  description})
+    if (!name) {
+      toast.error("Name Is Required");
+      return;
+    }
+    if (!email) {
+      toast.error("Email Is Required");
+      return;
+    }
+    if (!description) {
+      toast.error("Description Is Required");
+      return;
+    }
 
-    emailjs.sendForm('service_uodwo8m','template_wknyzfn', form.current, 'J8BtsotFO0nMuueRp')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_uodwo8m",
+        "template_wknyzfn",
+        form.current,
+        "J8BtsotFO0nMuueRp"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
-
-//   if(name.trim === ""){
-//     return TransformStream.error("Name Is Required")
-//   }
-// if(email.trim === ""){
-//   return TransformStream.error("Email Is Required")
-// }
-// if(description.trim === ""){
-//   return TransformStream.error("Description Is Required")
-// }
-
-// console.log(name,email,description)
-
-
-  return (<div className="contact-body">
-    {/* alert message success */}
-    {/* <div className="alert-success">
-      <span> Message Sent! Thank you for contacting us.</span>
-    </div> */}
-     {/* alert message error */}
-     {/* <div className="alert-error">
-      <span> Something went wrong! please try again</span>
-     </div> */}
-
-
-     {/* <ToastContainer theme="colored" />  //this for desigin theme*/}
-  <div className="contact-section">
-    <div className="contact-info">
-      <div><i class="bi bi-geo-alt-fill"></i>Amman, Amman, Jordan</div>
-      <div><i class="bi bi-envelope-fill"></i>nawaforgiving@gmail.com</div>
-      <div><i class="bi bi-telephone-fill"></i>+123 456 789</div>
-      <div><i class="bi bi-clock-fill"></i>Sun -Fri 8:00 Am to 5:00 pm</div>
-    </div>
-    <div className="contact-form" >
-      <h2>Contact Us</h2>
-      <h2>We'd love to hear from you.</h2>
-      {/* <form className="contact" action="" method="post"  >  */}
-      <form className="contact" action="" method="post" ref={form} onSubmit={sendEmail} > 
-
-        <input type="textt" name="name" className="text-boxx" placeholder="Your Name" required/>
-        <input type="emaill" name="email" className="text-boxx" placeholder="Your Email" required/>
-        <textarea name="message" rows="5" placeholder="your Message" required></textarea>
-        <input type="submit" name="submit" className="send-btn" value="send"/>
-      </form>
-    </div>
-  </div>
-  </div>
+  return (
+    <>
+      <ToastContainer/>
+      <div className="contact-body">
+        <div className="contact-section">
+          <div className="contact-info">
+            <div>
+              <i class="bi bi-geo-alt-fill"></i>Amman, Amman, Jordan
+            </div>
+            <div>
+              <i class="bi bi-envelope-fill"></i>fitratinsancommunity@gmail.com
+            </div>
+            <div>
+              <i class="bi bi-telephone-fill"></i>+123 456 789
+            </div>
+            <div>
+              <i class="bi bi-clock-fill"></i>Sun -Fri 8:00 Am to 5:00 pm
+            </div>
+          </div>
+          <div className="contact-form">
+            <h2>Contact Us</h2>
+            {/* <h2>We'd love to hear from you.</h2> */}
+            {/* <form className="contact" action="" method="post"  >  */}
+            <form
+              className="contact"
+              action=""
+              method="post"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <input
+                type="textt"
+                name="name"
+                className="text-boxx"
+                placeholder="Your Name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="emaill"
+                name="email"
+                className="text-boxx"
+                placeholder="Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <textarea
+              id="change_theplaceholder"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+              <input
+                type="submit"
+                name="submit"
+                className="send-btn"
+                value="send"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 export default Contact;
 // NOTE : still need
 // 1.vaildition [ALERT MESSAGE]
 // 2.map
-

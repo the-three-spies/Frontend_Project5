@@ -32,7 +32,7 @@ const NeedyByCategoy = (id) => {
     //console.log("id", myId);
     console.log("CategoryId", CategoryId);
     axios
-      .get(`https://fetratinsandonationnew.onrender.com/needycase/needyCategory/${CategoryId}`)
+      .get(`https://fetratinsandonationnewl.onrender.com/needycase/needyCategory/${CategoryId}`)
       .then((result) => {
         console.log("set result", result.data.cases);
         console.log("set result", result.data.cases);

@@ -1,75 +1,94 @@
-import React, { useState } from "react";
-
-import { useNavigate, Link } from "react-router-dom";
-// import {
-//   UilEstate,
-//   UilClipboardAlt,
-//   UilUsersAlt,
-//   UilPackage,
-//   UilChart,
-//   UilSignOutAlt,
-// } from "@iconscout/react-unicons";
-// import * as AiIcons from "react-icons/ai";
+import React, { useState,useContext } from "react";
+import { useNavigate, Link,Params, useParams } from "react-router-dom";
+import {MdDashboard} from "react-icons/md"
+import {BiUser,BiChat} from "react-icons/bi"
+import {BsXLg,BsCalendar2Check,BsGraphUp,BsMenuButtonWide} from "react-icons/bs"
+import {ImCalendar} from "react-icons/im"
+import {CiLogin} from "react-icons/ci"
+import {GrAdd} from "react-icons/gr"
+import { setLogout } from "../../redux/reducers/auth";
+import { useDispatch} from "react-redux";
+import { MyContext } from '../../App'
 
 const Sidebar = () => {
-  const [selcet, setselcet] = useState(0);
+  const { selcet,setselcet} = useContext(MyContext)
   const navigate=useNavigate()
+  const dispacth = useDispatch()
   const SidebarData = [
     {
       title: "Dashboard",
       path: "/admin/dashboard",
-      // icon: <AiIcons.AiFillHome />,
+       icon: <MdDashboard/>,
+    },
+    {
+      title: "Users",
+      path: "/admin/users",
+       icon: <BiUser/>,
     },
     {
       title: "Needy Cases",
       path: "/admin/needy_case",
-      // icon: <UilClipboardAlt />,
+      icon:<BsMenuButtonWide/>,
     },
     {
       title: "Donation Order",
       path: "/admin/donation_order",
-      // icon: <UilUsersAlt/>,
+      icon: <BsCalendar2Check/>,
     },
-
     {
-      title: "Users",
-      path: "/admin/users",
-      // icon: <UilPackage />,
+      title: "Analytics",
+      path: "/admin/analytics",
+      icon: <BsGraphUp />,
     },
     {
       title: "Chat",
-      path: "/admin/contact",
-      // icon: <UilChart/>,
+      path: "/admin/chat",
+      icon: <BiChat/>,
     },
     {
       title: "Events",
       path: "/admin/events",
-      // icon: <FaIcons.FaEnvelopeOpenText />,
+      icon: <ImCalendar/>,
     },
+    
     {
-      title: "Support",
+      title: "Add Campaign",
       path: "/admin/support",
-      // icon: <IoIcons.IoMdHelpCircle />,
-    },
+      icon: <GrAdd />,
+    }, 
+    {
+      title: "Log Out",
+      path: "/",
+      icon: <CiLogin/>,
+    }, 
   ];
-
   return (
     <>
-          <div className="slid">
+          <div className="container_a">
+        <div  className="menuItem_admin">
         {SidebarData.map((e,index) => {
           return (
-            <div
-              className="menuItem"
+            <div key={index} className={selcet==index?"menu_item_admin active":"menu_item_admin"}
               onClick={() =>{ setselcet(index);
+                if(e.title=='Log Out')
+                {
+                  dispacth(setLogout())
+                  navigate(e.path)
+
+                }
+                else
+                {
                 navigate(e.path)
-              }
-              }
-            >
-              {/* <item.icon /> */}
-              <p>{e.title}</p>
+                
+              }}
+              }>
+                <span className="primary">{e.icon}</span>
+              <h3>{e.title}</h3>
+
             </div>
           );
         })}
+       </div>
         </div>
 
     </>

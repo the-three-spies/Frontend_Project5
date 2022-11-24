@@ -1,17 +1,23 @@
 import React from 'react'
-import "./style.css";
-// import { Outlet } from 'react-router-dom';
-// import Navigation from '../Navigation';
+import Header from './header';
+import Maindashboard from './Maindash';
+import RightSide from './right';
 import Sidebar from './Sidebar';
-import MainDashboard from './MainDashboard';
-// import Calender from './Calender';
+import { useState,useContext } from 'react';
+import "./needy.css";
+import "./style.css"
+import { MyContext } from '../../App';
 const AdminPanel = () => {
+   const {theme}=useContext(MyContext)
+
   return (
     <>
+  
     <div className='admin_panal'>
-      <div className='container_panel'>
-<Sidebar/>
-<MainDashboard/>
+      <div className={theme==='dark'?'container_panel_a dark-them':'container_panel_a'}>
+        <Sidebar/>
+        <Maindashboard/>
+        <RightSide/>
       </div>
       </div>
     </>

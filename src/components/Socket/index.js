@@ -45,7 +45,7 @@
 
 
 import "./Socket.css"
-
+import ScrollToBottom from "react-scroll-to-bottom";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -69,6 +69,8 @@ function NewSoct() {
   const [messageReceived, setMessageReceived] = useState([]);
   const [messagesend, setMessageSend] = useState("");
   const [info, setInfo] = useState([]);
+  const [currentMessage, setCurrentMessage] = useState("");
+  const [messageList, setMessageList] = useState([]);
   const joinRoom = () => {
     // setRoom("Admin")
     if (room === "") {
@@ -80,21 +82,39 @@ function NewSoct() {
   },[])
 
   const sendMessage = () => {
-    socket.emit("send_message", { message, room,userId,stateRole,userName,src:"./assets/images/pic2.png"});
-    setMessageSend(userId)
+    // socket.emit("send_message", { message, room,userId,stateRole,userName,src:"./assets/images/pic2.png"});
+    // setMessageSend(userId)
     
-    console.log("sender",userId)
+    // console.log("sender",userId)
+////////////////////////
+if (currentMessage !== "") {
+  const messageData = {
+    room: room,
+    author: userName,
+    message:currentMessage,
+    stateRole:stateRole,
+    time:
+      new Date(Date.now()).getHours() +
+      ":" +
+      new Date(Date.now()).getMinutes(),
   };
-  let newArray=[]
+
+   socket.emit("send_message", messageData);
+  // setMessageList((list) => [...list, messageData]);
+  setCurrentMessage("");
+}
+
+  };
+  //let newArray=[]
 
   socket.on("receive_message", (data) => {
      
-    newArray.push(data.message)
-    setMessageReceived([...messageReceived,data.userName,data.message]);
+    //newArray.push(data.message)
+    setMessageList([...messageList,data]);
     setInfo([data.userName,data.message,data.userId,data.stateRole])
-    console.log("new", info)//,data.userId,data.stateRole
+    // console.log("new", info)//,data.userId,data.stateRole
 
-    console.log("rceved",data.userId)
+    // console.log("rceved",data.userId)
     //console.log(newArray)
    //// setMessageReceived(data.message);
     // {messageReceived.map((elem)=>{
@@ -127,41 +147,47 @@ socket.connect()
 // console.log("mmmmmmmjjhjhj",messageReceived)
   },[])
   return (
-    <div className="SOCITSYLE">
-      <h2> Message:</h2>
-      <hr></hr>
-      {
-      messageReceived&&messageReceived.map((elem)=>{
-        console.log("mmmm",messageReceived[2])
-        console.log("mmmmmmmjjhjhj",messagesend)
-        if(messagesend !==info[2]){
-         return <div className="bhbh">
-          <img className="socitImage" src="./assets/images/pic2.png"></img>
-          {elem}
-          
-          </div>
-        }else if(messagesend ==info[2]){
-        return  <div>
-          <img className="socitImage" src="./assets/images/pic5.png"></img>
-          {elem}
-          
-          </div>
-        }
-
-
-      })
-      
-      }
-<div className="messagSend">
-      <input className="socketText"
-        placeholder="Message..."
-        onChange={(event) => {
-           setMessage(event.target.value);
-        }}
-      />
-      <button className="btnSoct" onClick={sendMessage}> Send Message</button>
-      
-      <br></br>
+    <div className="socket_wrapper">
+    <div className="chat-window">
+      <div className="chat-header">
+        <p>Live Chat</p>
+      </div>
+      <div className="chat-body">
+      <ScrollToBottom className="message-container">
+          {messageList&&messageList.map((messageContent,i) => {
+            return (
+              <div key={`onemessage${i}`}
+                className="message"
+                id={userName === messageContent.author ? "you" : "other"}
+              >
+                <div>
+                  <div className="message-content">
+                    <p>{messageContent.message}</p>
+                  </div>
+                  <div className="message-meta">
+                    <p id="time">{messageContent.time}</p>
+                    <p id="author">{messageContent.author}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </ScrollToBottom>
+      </div>
+      <div className="chat-footer">
+        <input
+          type="text"
+          value={currentMessage}
+          placeholder="Hey..."
+          onChange={(event) => {
+            setCurrentMessage(event.target.value);
+          }}
+          onKeyPress={(event) => {
+            event.key === "Enter" && sendMessage();
+          }}
+        />
+        <button onClick={sendMessage}>&#9658;</button>
+      </div>
     </div>
     </div>
   );

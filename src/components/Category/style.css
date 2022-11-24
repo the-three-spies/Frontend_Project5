@@ -151,3 +151,17 @@ color:  dodgerblue !important;
     margin: 0;
   }
  
+
+  .header-cardcategory{
+    color: #908384 !important;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #908384;
+    font-family: poppins;
+    /* background:rgb(27,27,27,0.5) !important; */
+  }

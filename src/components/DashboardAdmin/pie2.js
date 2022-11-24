@@ -17,7 +17,7 @@ const [data,setdata]=useState([]);
  const getNumdonateCase = async () => {
 
   try {
-    const result = await axios.get(`https://fetratinsandonationnew.onrender.com/admin/numorderDonation`);
+    const result = await axios.get(`https://fetratinsandonationnewl.onrender.com/admin/numorderDonation`);
     if (result.data.success) {
       // setdata(result.data.result);
       // console.log(result.data.result)
@@ -54,6 +54,8 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
+            <span> All Donation Order By Section</span>
+
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
