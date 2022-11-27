@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120vh;
+  /* height: 100vh; */
   /* background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url("https://images.pexels.com/photos/271168/pexels-photo-271168.jpeg?auto=compress&cs=tinysrgb&w=600") ; */
   background-size: cover;
   background: linear-gradient(rgba(17, 5, 5, 0.58), rgba(1, 1, 23, 0.58)),
-    url("https://images.pexels.com/photos/271168/pexels-photo-271168.jpeg?auto=compress&cs=tinysrgb&w=600");
+    url("https://res.cloudinary.com/ddsrkj1dx/image/upload/v1669291518/Donation_ENG_orttfu.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

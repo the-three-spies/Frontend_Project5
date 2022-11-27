@@ -4,8 +4,8 @@ import Maindashboard from './Maindash';
 import RightSide from './right';
 import Sidebar from './Sidebar';
 import { useState,useContext } from 'react';
-import "./needy.css";
-import "./style.css"
+import "./admin2.css";
+import "./admin.css"
 import { MyContext } from '../../App';
 const AdminPanel = () => {
    const {theme}=useContext(MyContext)
@@ -13,8 +13,8 @@ const AdminPanel = () => {
   return (
     <>
   
-    <div className='admin_panal'>
-      <div className={theme==='dark'?'container_panel_a dark-them':'container_panel_a'}>
+    <div className={theme==='dark'?'dark adminpanel':'adminpanel'}>
+      <div className="container_panel_a">
         <Sidebar/>
         <Maindashboard/>
         <RightSide/>

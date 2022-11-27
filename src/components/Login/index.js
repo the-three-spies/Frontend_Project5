@@ -173,7 +173,7 @@ const Login = () => {
   const [message, setMesage] = useState("");
 
   const loginUser = (b) => {
-    //console.log("poi");
+   // setTtoasboolean(true)
 
     axios
       .post(`https://fetratinsandonationnewl.onrender.com/login/`, {
@@ -261,6 +261,7 @@ toast.success("Welcome")
             placeholder="Password"
           /> */}
           {/* ---show hide password-- */}
+          <div className="sticktheicon">
           <input
           className="stickTheEyePassword"
             ref={num === 2 ? inputRef : null}
@@ -277,17 +278,19 @@ toast.success("Welcome")
               }
             }}
           />
-          {showPassword ? (
+          {/* {showPassword ? (
             <i
               onClick={showHidePassword}
               className="bi bi-eye-fill show-password-icon"
             ></i>
+            
           ) : (
             <i
               onClick={showHidePassword}
               className="bi bi-eye-slash-fill show-password-icon"
             ></i>
-          )}
+          )} */}
+          </div>
           <button className={toasboolean === false ? "form_login_btn" : "newform_login_btn"}
          
 
@@ -309,11 +312,13 @@ toast.success("Welcome")
               <>
                 <h1 className="form-title">Register</h1>
                 <input
+                className="inputPlacecholder"
                   type="number_register"
                   placeholder="Age"
                   onChange={(e) => setAge(e.target.value)}
                 />
                 <input
+                className="inputPlacecholder"
                   type="text_register"
                   placeholder="City"
                   onChange={(e) => setCity(e.target.value)}
@@ -355,6 +360,7 @@ toast.success("Welcome")
                     })}
                 </select> */}
                 <input
+                className="inputPlacecholder"
                   type="password"
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}

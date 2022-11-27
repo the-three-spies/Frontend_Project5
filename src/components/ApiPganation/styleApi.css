@@ -1,86 +1,78 @@
 .maimpagination {
-    display: grid;
-    grid-template-columns: 1fr 1fr  ;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    width: 70vw;
-  }
-  
-  .user {
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: #58482b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 500px;
-    height: 300px;
-    margin: 20px;
-  }
-  .imageAPIE{
-    height: 200PX;
-    width: 100%;
-  }
-  .paginationBttns {
-    width: 80%;
-    height: 40px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 5%;
-  }
-  
-  .paginationBttns a {
-    padding: 10px;
-    margin: 8px;
-    border-radius: 5px;
-    border: 1px solid PINK;
-    color:  PINK;
-    cursor: pointer;
-  }
-  
-  .paginationBttns a:hover {
-    color: white;
-    background-color:  #545454;
-  }
-  
-  .paginationActive a {
-    color: white;
-    background-color:  #545454;
-  }
-  
-  .paginationDisabled a {
-    color: rgb(191, 56, 56);
-    background-color: rgb(168, 68, 68);
-  }
-
-
-
-  /*start style with book card*/
-.books_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 70vw;
+}
+.user {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #58482b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  margin: 20px;
+}
+.imageAPIE {
+  height: 200px;
+  width: 100%;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid PINK;
+  color: PINK;
+  cursor: pointer;
+}
+.paginationBttns a:hover {
+  color: white;
+  background-color: #545454;
+}
+.paginationActive a {
+  color: white;
+  background-color: #545454;
+}
+.paginationDisabled a {
+  color: rgb(191, 56, 56);
+  background-color: rgb(168, 68, 68);
+}
+/*start style with book card*/
+.books_container {
   margin: 0;
   padding: 0;
   box-shadow: border-box;
   font-size: 1.7rem;
-  font-family: 'Merriweather Sans' ,sans-serif;
-   background: #efefef;; 
+  font-family: "Merriweather Sans", sans-serif;
+  background: #efefef;
   color: #545454;
   padding: 0rem;
 }
-.books h2{
+.books h2 {
   text-align: center;
   margin-bottom: 0rem;
   font-size: 4rem;
 }
-.books h3{
+.books h3 {
   text-align: center;
   margin-bottom: 0rem;
   font-size: 3rem;
 }
-.all_books{
+.all_books {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,9 +80,9 @@
   /* display: inline-block; */
   /* float: inline-start; */
 }
-.book{
+.book {
   overflow: hidden;
-  background:#ffffff;
+  background: #ffffff;
   color: #21201e;
   text-align: center;
   width: 375px;
@@ -104,46 +96,36 @@
   margin: 1rem;
   box-shadow: 5px 5px 20px rgb(171, 48, 48);
 }
-.book:hover img{
+.book:hover img {
   scale: 1.1;
 }
-.book:hover{
+.book:hover {
   box-shadow: 5px 15px 25px #eeeeee;
 }
-.book img{
+.book img {
   height: 200px;
   margin: 1rem;
   transform: all 0.3s;
 }
-.book .book_btn{
+.book .book_btn {
   color: #eceece;
   display: inline-block;
   text-decoration: none;
-  background:#f5f5f5;
+  background: #f5f5f5;
   padding: 1.2rem 3rem;
   border-radius: 1rem;
   margin-top: 1rem;
   transform: all 0.2s;
   font-size: 19px;
   border: none;
-  background-color: #908384;
-  color: #FFF5EB;
-  transition: .3s;
+  background-color: #545454;
+  color: #fff5eb;
+  transition: 0.3s;
   cursor: pointer;
 }
-.book .book_btn:hover{
+.book .book_btn:hover {
   transform: scale(1.1);
-} 
-
-
-
-
-
-
-
-
-
-
+}
 
 /* .maimpagination {
     display: grid;
@@ -172,43 +154,31 @@
     width: 100%;
   } */
 
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #F8BDC1;
+  color: black;
+  cursor: pointer;
+}
+.paginationBttns a:hover {
+  color: white;
+  background-color: #F8BDC1;
+}
+.paginationActive a {
+  color: white;
+  background-color: #545454;
+}
 
-
-
-
-
-
-
-
-
-  .paginationBttns {
-    width: 80%;
-    height: 40px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .paginationBttns a {
-    padding: 10px;
-    margin: 8px;
-    border-radius: 5px;
-    border: 1px solid PINK;
-    color: black;
-    cursor: pointer;
-  }
-  
-  .paginationBttns a:hover {
-    color: white;
-    background-color:  PINK;
-  }
-  
-  .paginationActive a {
-    color: white;
-    background-color: palevioletred
-  }
-  
-  .paginationDisabled a {
-    color: white;
-    background-color: rgb(7, 4, 4);
-  }
+.paginationDisabled a {
+  color: white;
+  background-color:#545454 ; /*rgb(7, 4, 4)*/
+}

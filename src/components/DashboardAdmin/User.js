@@ -1,12 +1,14 @@
 import React from 'react'
 import Sidebar from './Sidebar';
-import "./style.css";
-import { useState,useEffect} from 'react';
+import "./admin.css";
+import { useState,useEffect,useContext} from 'react';
+import { MyContext } from '../../App';
 import axios from 'axios'
 const User = () => {
 const [user, setUser] = useState([])
 const [message, setMessage] = useState("");
 const [status, setStatus] = useState(false);
+const {theme}=useContext(MyContext)
 //===============================================================
 const infoUser = async () => {
   try {
@@ -35,7 +37,7 @@ infoUser()
 //===============================================================
   return (
     <>
-    <div className='admin_panal'>
+<div className={theme==='dark'?'dark adminpanel':'adminpanel'}>
       <div className='container_panel'>
         <Sidebar/> 
         <div className='main_dashbored'>

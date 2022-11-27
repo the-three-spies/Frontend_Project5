@@ -1,4 +1,6 @@
 import "./about.css";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="about-body">

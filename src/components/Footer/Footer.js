@@ -12,21 +12,24 @@ const Footer = () => {
           <div className="footer-imgs">
             <img
               className="footer-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6r5wG-tgfCBvKgXk7FiknB7nUcd48tHx-Uw&usqp=CAU"
+              src="https://res.cloudinary.com/dqsg0zf1r/image/upload/v1669406927/pexels-gustavo-fring-7156193_hykixu.jpg
+              "
               alt=""
             />
           </div>
           <div className="footer-imgs">
             <img
               className="footer-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0N01pf13TjrY524osbD9Cy_o1EVmrWhMyOQ&usqp=CAU"
+              src="https://res.cloudinary.com/dqsg0zf1r/image/upload/v1669406927/clothes_unwkro.jpg
+              "
               alt=""
             />
           </div>
           <div className="footer-imgs">
             <img
               className="footer-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj2t2CT7g1ly6sBm96zRxS6qta8GJw7_Cxww&usqp=CAU"
+              src="https://res.cloudinary.com/dqsg0zf1r/image/upload/v1669406927/pexels-gustavo-fring-7156166_vi40la.jpg
+              "
               alt=""
             />
           </div>

@@ -12,6 +12,7 @@ function ApiPagination() {
       setUsers(result.data.books);
     });
   }, []);
+  
   const usersPerPage = 4;
   const pagesVisited = pageNumber * usersPerPage;
   const displayUsers = users

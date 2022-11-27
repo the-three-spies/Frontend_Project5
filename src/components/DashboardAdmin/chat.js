@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Sidebar from './Sidebar';
-import "./style.css";
+import "./admin.css";
+import { MyContext } from '../../App';
 import NewSoct from '../Socket';
+
 const ChatAdmin = () => {
+  
+  const {theme}=useContext(MyContext)
   return (
     <>
    
-    <div className='admin_panal'>
+   <div className={theme==='dark'?'dark adminpanel':'adminpanel'}>
       <div className='container_panel'>
         <Sidebar/>  
         <div className='main_dashbored'>

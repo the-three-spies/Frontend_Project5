@@ -1,7 +1,7 @@
 import React from 'react'
-import "./needy.css";
+import "./admin.css";
+import "./admin2.css";
 import { useState,useEffect } from 'react'
-
 import axios from 'axios'
 const RightSide = () => {
 const [updat, setUpdat] = useState([]);
@@ -41,18 +41,19 @@ infoUpdate()
   return (
     <div className='right_side'>
         <div className='recent_update'>
-            <h2>Recent updates</h2>
+            <h3>Recent updates</h3>
 <div className='update'>
    { updat && updat.map((e,i)=>
    {
         return (
             <div key={i}>
                 <div className='profile_img'>
-                    <img src='https://res.cloudinary.com/dqsg0zf1r/image/upload/v1669160965/eee-removebg-preview_byver4.png'></img>
+    
+                      <img src='https://res.cloudinary.com/dqsg0zf1r/image/upload/v1669318870/tutorial-preview-small-2-removebg-preview_addv1l.png'></img>
                     </div>
                     <div className='messages'>
-                        <h5>{e.firstName}</h5>
-                        <h5>{e.title}</h5>
+                        <p>{e.firstName}</p>
+                        <p>{e.title}</p>
                         <h6 className='text_muted'>2 Minutes ago
                         </h6>
                         </div>

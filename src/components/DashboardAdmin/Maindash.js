@@ -5,7 +5,7 @@ import { BiTask } from 'react-icons/bi';
 import { BsGraphUp } from 'react-icons/bs';
 import axios from 'axios'
 const Maindashboard = () => {
-    const iconlist = [{ icon: <FaUser />, title: " User", class: "danger_a" },
+    const iconlist = [{ icon: <FaUser />, title: " User", class: "primary_a" },
     { icon: <BiTask />, title: " Donation Order", class: "warning_a" },
     { icon: <BsGraphUp />, title: "Needy Casese", class: "success_a" }
     ]

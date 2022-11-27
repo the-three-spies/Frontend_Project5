@@ -15,7 +15,6 @@ import Header from "./components/Header/header"
 import Navbar from './components/Header/navbar'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import CardCategory from './components/CardCategory/CardCategory'
 import OurTeam from './components/OurTeam/OurTeam'
 import FAQs from './components/FAQs/FAQs'
 
@@ -32,7 +31,6 @@ import DonationOrder from "./components/CreateDonation";
 
 // import MyDonationList from "./components/DashboardDoner";
 
-import Banner from './components/Banner/Banner'
 import About from "./components/About/About";
 
 
@@ -192,7 +190,7 @@ useEffect(() => {
 <Route path="/home" element={<><VideoNav/><Video/><HomeCardCategory/><OurImapct/><OurValues/><Footer/></>}/>
 <Route path="/Contact"element={<><Header/><Contact/><Footer/></>}/>
 <Route path="/about"element={<><Header/><About/><Footer/></>}/>
-<Route path="/ourTeam"element={<><Header/><OurTeam/><Banner/><Footer/></>}/>
+<Route path="/ourTeam"element={<><Header/><OurTeam/><Footer/></>}/>
 <Route path="/FAQs"element={<><Header/><FAQs/><Footer/></>}/>
 <Route path="AddNeedy2/:id"element={<><Header/><NavbarNew/><AddNeedy2/><Footer/></>}></Route>
 <Route path="/ourStory"element={<><Header/><OurStory/><OurTeam/><Footer/></>}/>
@@ -204,8 +202,8 @@ useEffect(() => {
 
 NeedyMonyByUserId
 <Route path="/NeedyMonyByUserId"element={<><Header/><NavbarNew/><NeedyMonyByUserId/><Footer/></>}/>
-<Route path="/NewSoct" element={<><Header/><NavbarNew/><NewSoct/><Footer/></>}  ></Route>
-<Route path="/ApiPag" element={<><Header/><ApiPagination/><Footer/></>}  ></Route>
+<Route path="/NewSoct" element={<><Header/><NavbarNew/><ChatDoner/><Footer/></>}  ></Route>
+<Route path="/ApiPag" element={<><Header/><ApiPagination/><Footer/></>}></Route>
 <Route path="/check" element={<><Header/><Checkout /><Footer/></>} />
  {/* 
 
@@ -221,7 +219,7 @@ NeedyMonyByUserId
 
 
 
-<Route path="/donate" element={<><Header/><DonationOrder/><Banner/><Footer/></>}/>
+<Route path="/donate" element={<><Header/><DonationOrder/><Footer/></>}/>
 {/* <Route path="/mydonation" element={<><Header/><MyDonationList/><Footer/></>}></Route> */}
 <Route path="/materialdonation/:id" element={<><Header/><Navigation/><Material/><Footer/></>}/>
 <Route path="/monydonation/:id" element={<><Header/><Navigation/><Money/><Footer/></>}/>
@@ -229,7 +227,8 @@ NeedyMonyByUserId
 <Route path="/mythingdonation" element={<><Header/><Navigation/>< MaterialDonation/><Footer/></>}></Route>
 <Route path="/myChat" element={<><Header/><Navigation/><ChatDoner/><Footer/></>}/>
 <Route path="/NewSoct" element={<><NewSoct/></>}  ></Route>
-
+<>
+{stateRole=='1'?<>
 <Route path="/admin/dashboard" element={<><HeaderAdmin/><AdminPanel/></>}/>
  <Route path="/admin/users" element={<><HeaderAdmin/><User/></>}/>
  <Route path="/admin/needy_case" element={<><HeaderAdmin/><NeedyCase/></>}/>
@@ -238,9 +237,10 @@ NeedyMonyByUserId
  <Route path="/admin/events" element={<><HeaderAdmin/><Events/></>}/>
  <Route path="/admin/support" element={<><HeaderAdmin/><AddCampaign/></>}/>
  <Route path="/admin/chat" element={<><HeaderAdmin/><ChatAdmin/></>}/>
-
-
-
+ </>
+ :""
+}
+</>
 
 
 {/* 

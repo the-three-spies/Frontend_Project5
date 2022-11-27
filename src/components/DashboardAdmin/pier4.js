@@ -36,7 +36,7 @@ const [status, setStatus] = useState(false);
       })
   
     setdata(newState)
-    console.log(newState)
+    console.log(result.data.result)
     //   setStatus(true);
     //             setMessage("")
       
@@ -85,7 +85,7 @@ useEffect(() => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'State Fitrat Insan App',
+            legend: 'Annual report Fitrat Insan App (Month)',
             legendOffset: 36,
             legendPosition: 'middle'
         }}

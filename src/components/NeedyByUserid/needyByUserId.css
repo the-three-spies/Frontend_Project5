@@ -73,7 +73,7 @@
 .maiDivMonyTow{
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: 65% 25%; 
+    grid-template-columns: 50% 20%; 
 
 }
 .divImageMonynew{
@@ -101,9 +101,10 @@ font-size: 24px !important;
 
 }
 .imgstyle{
-    width: 400px;
-    height: 460px;
+    width: 320px;
+    height: 450px;
 }
+
 
 /* .newbi-trash-fill{
 
@@ -116,3 +117,10 @@ button[disabled]
 
   
 }  */
+
+
+
+.newtestmoney{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

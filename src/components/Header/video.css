@@ -15,7 +15,6 @@
     flex-direction: column;
     align-items: center;
     padding: 110px 100px;
-   
 }
 
 .box_video:before {
@@ -34,8 +33,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
 } 
+/* video_bg{
+  
+} */
+.video_info{
+  position: absolute;
+}
+
 @media (max-width:1000px){
     .box_video{
         padding: 100px 50px;
@@ -57,8 +62,6 @@
     align-items: center;
     color: #fff;
     padding: 35px 100px 0;
-    /* background: #000;  if we dont the bg be a video just put bg with the color u want */
-    /* background:rgba(255, 251, 251, 0.5) ;  */
 }
 .video_logo_link{
     text-transform: capitalize;
@@ -179,6 +182,17 @@
     border: 4px solid #fff;
     transition: all .5s;
     text-decoration: none;
+    position: absolute;
+    /* margin-right: 0;
+    position: fixed;
+    display: flex; */
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 30%;
+    /* -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
+    ;
 }
 .box_video_Btn:hover{
     background: #fff;
@@ -321,12 +335,12 @@
       top: 100%;
       right: 0;
       width: 100%;
-      height: 280%;
+      /* height: 280%; */
       padding-top: 12px;
-      background-color:#545454; 
+      background-color:gray; 
       /* background:rgba(2, 1, 1, 0.5) ;  */
       font-size: 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     .navbar-links_vidNav{
       flex-direction: column;
