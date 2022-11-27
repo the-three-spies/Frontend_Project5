@@ -1,14 +1,15 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import {FaCheck} from 'react-icons/fa'
-import "./style.css";
-import { useState, useEffect } from "react";
+import "./admin.css";
+import { useState, useEffect,useContext } from "react";
+import { MyContext } from '../../App';
 import axios from "axios";
 const Donation = () => {
   const [donationOrder, setdonationOrder] = useState([]);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(false);
-
+  const {theme}=useContext(MyContext)
   //===============================================================
 
   const allDonationOrder = async () => {
@@ -61,7 +62,7 @@ const Donation = () => {
   //===============================================================
   return (
     <>
-      <div className="admin_panal">
+      <div className={theme==='dark'?'dark adminpanel':'adminpanel'}>
         <div className="container_panel">
           <Sidebar />
           <div className="main_dashbored">
@@ -83,10 +84,10 @@ const Donation = () => {
                         <td>{element.deleverydate}</td>
                         <td> {element.amount}</td>
                         <td>{element.address} </td>
-                        <td>{element.confirm==false && element.title!='money'?<button onClick={()=>
+                        <td>{element.confirm==false && element.title!='money'?<button onClick={()=> 
                         {
                           confirmDelivery (element.id)
-                        }}><FaCheck/></button>:'Done'}</td>
+                        }} className="check"> <span><FaCheck/></span></button>:'Done'}</td>
                       </tr>
                     );
                   })}

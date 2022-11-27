@@ -54,7 +54,7 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
-            <span> All Donation Order By Section</span>
+            <h3> All Donation Order By Section</h3>
 
   <ResponsivePie
     data={data}

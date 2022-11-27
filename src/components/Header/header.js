@@ -56,6 +56,7 @@ const Header = () => {
         <Link to="/FAQs" className="navbar-link" onClick={()=>{setToggle(false)}}>FAQs</Link>
         <Link to="/contact" className="navbar-link" onClick={()=>{setToggle(false)}}>Contact</Link>
         <Link to="/ApiPag" className="navbar-link" onClick={()=>{setToggle(false)}}>Buy</Link>
+        <Link to="/check" className="navbar-link" onClick={()=>{setToggle(false)}}>Donate</Link>
         {/* <Link to="/ourTeam" className="navbar-link" onClick={()=>{setToggle(false)}}>Our Team</Link> */}
           {/* <li onClick={()=>{setToggle(false)}} className="navbar-link">FAQs</li> */}
         </ul>
@@ -66,13 +67,17 @@ const Header = () => {
       {/* {showLoginLogout ? (onClick={showLoginLogoutHandler}):(onClick={showLoginLogoutHandler})} */}
           <Link to="/login" className="header-top-link">
             {/* <i className="bi bi-person"></i> */}
-            Login
+            Login<i class="bi bi-person-fill"></i>|
           </Link>
           <Link to="/register" className="header-top-link">
-            Register
+            Register <i class="bi bi-person-fill"></i>
           </Link>
         </div>
-: <div> <Link to="/login" onClick={()=>{ dispacth(setLogout())}} className="logout" > Logout</Link></div>}
+: <div> <Link to="/login" onClick={()=>{ dispacth(setLogout())}} className="logout" > Logout</Link>
+<div>
+<Link  className="logout" onClick={()=>{navigate(-1)}}><i class="bi bi-skip-backward-fill"></i></Link>
+</div>
+</div>   }
       <div onClick={()=> setToggle(prev=>!prev)} className="header-menu">
         {toggle ?<i className="bi bi-x-lg"></i>: <i className="bi bi-list"></i>}
       </div>

@@ -53,6 +53,7 @@ const VideoNav = () => {
         <Link to="/FAQs" className="navbar-link_vidNav" onClick={()=>{setToggle(false)}}>FAQs</Link>
         <Link to="/contact" className="navbar-link_vidNav" onClick={()=>{setToggle(false)}}>Contact</Link>
         <Link to="/ApiPag" className="navbar-link_vidNav" onClick={()=>{setToggle(false)}}>Buy</Link>
+        <Link to="/check" className="navbar-link_vidNav" onClick={()=>{setToggle(false)}}>Donate</Link>
         </ul>
       </nav>
       {/* ----login logout---- */}

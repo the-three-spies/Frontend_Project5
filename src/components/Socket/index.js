@@ -176,6 +176,7 @@ socket.connect()
       </div>
       <div className="chat-footer">
         <input
+        
           type="text"
           value={currentMessage}
           placeholder="Hey..."

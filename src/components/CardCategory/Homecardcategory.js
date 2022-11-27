@@ -7,8 +7,6 @@ import category, {
   setCategory,
   setCategoryId,
 } from "../../redux/reducers/category";
-import AddNeedy from "../CreateCase";
-import NeedyByCategoy from "../DashboardNeedy/GetNeedyByCategoryId";
 //---------------- AddCategory ----------------
 const HomeCardCategory = () => {
   const dispatch = useDispatch();
@@ -54,13 +52,13 @@ const HomeCardCategory = () => {
                   className="card-category-intro-p"
                   onClick={() => {
                     dispatch(setCategoryId(item.id));
-                    navigate(`/AddNeedy2/${item.id}`);
+                    // navigate(`/AddNeedy2/${item.id}`);
                   }}
                 >
- here are our donations in the <br></br>
+                  here are our donations in the <br></br>
                   <span>'{item.title}'</span>
                   section .<br></br>
-                  <br></br>click here to fill out a form <br/> and get help.
+                  <br></br>it's a tender service.to get <br />and feel with each other. 
                 </p>
               </div>
             </div>
@@ -70,4 +68,3 @@ const HomeCardCategory = () => {
   );
 };
 export default HomeCardCategory;
-//note: need to add "p" in the category table(BEnd) ...  then in postman ... after that(FEnd) add it here with styling

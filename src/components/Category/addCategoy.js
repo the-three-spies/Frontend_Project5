@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setCategory, addCategory } from "../../redux/reducers/category";
+import { addCategory } from "../../redux/reducers/category";
 import { useNavigate } from "react-router-dom";
 //---------------- AddCategory ----------------
 const AddCategory = () => {
@@ -43,13 +43,6 @@ const AddCategory = () => {
             setTitle(e.target.value);
           }}
         ></input>
-        {/* <input
-          placeholder="image"
-          type={"image"}
-          onChange={(e) => {
-            setImgePath(e.target.value);
-          }}
-        ></input> */}
         <button onClick={handleAddCategory}>add Category</button>
       </div>
     </>

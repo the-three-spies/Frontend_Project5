@@ -1,14 +1,14 @@
 .contact-form-title{
     color: #545454;
     text-align: start;
-    font-size: 20px;
+    font-size: 19px;
 }
 .footer{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding:30px;
-    background-color:  #ccc;
+    background-color:  #efefef;
     flex-wrap: wrap;
    /* position: relative; */
   /* margin-top: 0.2%; */
@@ -19,14 +19,16 @@
 }
 .footer-item-title{
     margin-bottom: 21px;
+    text-align: start;
 }
 .footer-item-list{
     padding: 5px;
 }
 .footer-item-link{
     margin-bottom: 12px;
-    font-weight: 600;
+    /* font-weight: 600; */
     cursor: pointer;
+    text-align: start;
 }
 .footer-item-link:hover{
     text-decoration: underline;
@@ -108,7 +110,8 @@
     
 }
 .footer-img{
-    width: 100%;
+    width: 130px;
+    height: 100px;
 }
 
 /* Note from 27 until 81 need edit*/

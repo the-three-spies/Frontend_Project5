@@ -5,8 +5,8 @@ import { FiSun } from 'react-icons/fi'
 import { HiMoon } from 'react-icons/hi'
 import { useContext } from 'react'
 import { MyContext } from '../../App'
-import "./style.css";
-import "./needy.css";
+import "./admin.css";
+import "./admin2.css";
 const HeaderAdmin = () => {
   const { theme, setTheme } = useContext(MyContext)
   return (
@@ -19,11 +19,10 @@ const HeaderAdmin = () => {
           <AiOutlineMenu />
         </button>
         <div className='them-toggler_admin'>
-          <button
-            className='icon-light'>
-            <FiSun />
+          <button onClick={() => { setTheme('');localStorage.clear() }}>
+          <span><FiSun /> </span>
           </button>
-          <button icon-light onClick={() => { setTheme('dark') }
+          <button  onClick={() => { setTheme('dark');localStorage.setItem('theme',theme) }
           }>
             <span><HiMoon /></span>
 

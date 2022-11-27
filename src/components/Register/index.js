@@ -163,21 +163,25 @@ const Register = () => {
       >
         <h1 className="form-title">Register</h1>
         <input
+        className="inputPlacecholder"
           type="text_register"
           placeholder="First Name"
           onChange={(e) => setFirstName(e.target.value)}
         />
         <input
+        className="inputPlacecholder"
           type="text_register"
           placeholder="Last Name"
           onChange={(e) => setLastName(e.target.value)}
         />
         <input
+        className="inputPlacecholder"
           type="number_register"
           placeholder="Age"
           onChange={(e) => setAge(e.target.value)}
         />
         <input
+        className="inputPlacecholder"
           type="text_register"
           placeholder="City"
           onChange={(e) => setCity(e.target.value)}
@@ -231,6 +235,7 @@ const Register = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
+          className="inputPlacecholder"
           type="emaill"
           placeholder="Email"
         />
@@ -238,6 +243,7 @@ const Register = () => {
           onChange={(e) => {
             setPassword(e.target.value);
           }}
+          className="inputPlacecholder"
           type="password"
           placeholder="Password"
         />

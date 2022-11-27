@@ -51,7 +51,7 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
- <span> All Needy Cases By Section</span>
+ <h3> All Needy Cases By Section</h3>
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}

@@ -1,14 +1,17 @@
 import React from 'react'
 import Sidebar from './Sidebar';
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useContext } from 'react';
 import axios from 'axios';
-import "./style.css";
-import "./needy.css";
+import "./admin.css";
+import "./admin2.css";
+import { MyContext } from '../../App';
 import { FaSearch } from 'react-icons/fa';
 const NeedyCase = () => {
   const [needyCase, setneedyCase] = useState([])
   const [message, setMessage] = useState("");
-    const [status, setStatus] = useState(false);  const [search, setsearch] = useState("")
+    const [status, setStatus] = useState(false); 
+     const [search, setsearch] = useState("");
+     const {theme}=useContext(MyContext)
       //===============================================================
 
       const allNeedyCase = async () => {
@@ -60,13 +63,13 @@ allNeedyCase()
     //===============================================================
   return (
   <>
-  <div className='admin_panal'>
+ <div className={theme==='dark'?'dark adminpanel':'adminpanel'}>
       <div className='container_panel'>
         <Sidebar/>  
         <div className='main_dashbored'>
         <h1> All Needy Cases</h1>
         <div className="search">
-        <input type="text" width="40" placeholder="search" onChange={(e) => { setsearch(e.target.value) }}></input>
+        <input type="text" width="40" placeholder="search by name of case" onChange={(e) => { setsearch(e.target.value) }}></input>
         <button onClick={searchInCase} ><FaSearch /></button>
         </div>
         <div className='latest_Case'>

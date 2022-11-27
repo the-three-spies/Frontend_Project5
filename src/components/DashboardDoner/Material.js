@@ -135,7 +135,7 @@ const MaterialDonation = () => {
         
         <p>{donate.description}</p>
         {idupdate == donate.id ? (
-                <div>
+                <div class="info_donate">
                   <input
                     type="date"
                     onChange={(e) => {

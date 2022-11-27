@@ -1,159 +1,161 @@
 .form_wrapper_login {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-size: cover;
-    font-family: "Roboto", sans-serif !important;
-    background: linear-gradient(rgba(17, 5, 5, 0.58), rgba(1, 1, 23, 0.58)),
-      url("https://images.pexels.com/photos/271168/pexels-photo-271168.jpeg?auto=compress&cs=tinysrgb&w=600");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .login_form {
-    margin-top: 50px;
-    text-align: center;
-  }
-  .login_form input {
-    display: block;
-    width: 350px;
-    height: 40px;
-    margin: 20px;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    border-bottom: 1px solid white;
-    background: transparent;
-    color: white;
-    /*-----------------------------------------*/
-  }
-  .stickTheEyePassword{
-    position: relative;
-  }
-  .form_login_btn {
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    background-color: black;
-    border: none;
-    color: white;
-    margin-top: 20px;
-    background: white;
-    font-weight: bold;
-    color: #111111;
-    box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
-    display: inline;
-  }
-  #sinInDiv {
-    width: 150px !important;
-    height: 40px !important;
-    border: none;
-    /* padding: 10px 0;
-      margin: -10px 0; */
-  }
-  .form_login_btngoogle {
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    background-color: black;
-    border: none;
-    color: white;
-    margin-top: 20px;
-    background: white;
-    font-weight: bold;
-    color: #111111;
-    box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
-  }
-  .login_form h1 {
-    margin-bottom: 30px;
-    color: white;
-  }
-  ::placeholder {
-    color: white;
-  }
-  
-  .form_login_btn {
-    background: white;
-    font-weight: bold;
-    color: #111111;
-    box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
-  }
-  .form_login_btn:hover {
-    background-color: #292929;
-    color: white;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .form_login_btn {
-    background: #111111;
-    color: white;
-  }
-  .form_footer {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Roboto", sans-serif !important;
-  }
-  .Form_Link {
-    text-decoration: none;
-    font-size: 19px;
-    color: white;
-    font-family: "Roboto", sans-serif !important;
-  }
-  .show-password-icon {
-    position: absolute;/*---------------------------------------------------------*/
-    top: 293px;
-    right: 590px;
-    font-size: 21px;
-    color: white;
-    z-index: 2;
-    cursor: pointer;
-  }
-  .role_input {
-    position: relative;
-  }
-  /* .select_role_select {
-    position: absolute;
-    max-height: 20em;
-    border: 0 none;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  
-  select option {
-    font-size: 0.8em;
-    padding: 0.3em 1em;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  option{
-      font-size: 50px;
-  }
-  select option  :hover {
-      background-color: rgb(235, 92, 40) !important;
-      color: rgb(83, 14, 133) !important;
-    } */
-  .newform_login_btn {
-    width: 350px;
-    height: 40px;
-    font-size: 20px;
-    background-color: green;
-    border: none;
-    color: white;
-    margin-top: 20px;
-    cursor: none;
-    font-weight: bold;
-    color: #111111;
-    box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
-    display: inline;
-  }
-  /* .newform_login_btn:disabled,
-  button[disabled]
-  {
-    
-      
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  background-size: cover;
+  font-family: "Roboto", sans-serif !important;
+  background: linear-gradient(rgba(17, 5, 5, 0.58), rgba(1, 1, 23, 0.58)),
+    url("https://res.cloudinary.com/ddsrkj1dx/image/upload/v1669291518/Donation_ENG_orttfu.png") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* margin-bottom: 10px; */
+}
+.login_form {
+  margin-top: 50px;
+  text-align: center;
+}
+.login_form input {
+  display: block;
+  width: 350px;
+  height: 40px;
+  margin: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  /*-----------------------------------------*/
+}
+.form_login_btn {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  background: white;
+  font-weight: bold;
+  color: #111111;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
+  display: inline;
+}
+#sinInDiv {
+  width: 150px !important;
+  height: 40px !important;
+  border: none;
+  /* padding: 10px 0;
+    margin: -10px 0; */
+}
+.form_login_btngoogle {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  background: white;
+  font-weight: bold;
+  color: #111111;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
+}
+.login_form h1 {
+  margin-bottom: 30px;
+  color: white;
+}
+.inputPlacecholder::placeholder {
+  color: white;
+}
+
+.form_login_btn {
+  background: white;
+  font-weight: bold;
+  color: #111111;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
+}
+.form_login_btn:hover {
+  background-color: #292929;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.form_login_btn {
+  background: #111111;
+  color: white;
+}
+.form_footer {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif !important;
+  height: 5%;
+  margin-bottom: 50px;
+}
+.Form_Link {
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  font-family: "Roboto", sans-serif !important;
+}
+.show-password-icon {
+  position: absolute;/*---------------------------------------------------------*/
+  top: 293px;
+  right: 510px;
+  font-size: 21px;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+}
+.stickTheEyePassword{
+  position: relative;
+}
+.role_input {
+  position: relative;
+}
+/* .select_role_select {
+  position: absolute;
+  max-height: 20em;
+  border: 0 none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+select option {
+  font-size: 0.8em;
+  padding: 0.3em 1em;
+  background-color: transparent;
+  cursor: pointer;
+}
+option{
+    font-size: 50px;
+}
+select option  :hover {
+    background-color: rgb(235, 92, 40) !important;
+    color: rgb(83, 14, 133) !important;
   } */
+.newform_login_btn {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  background-color: green;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  cursor: none;
+  font-weight: bold;
+  color: #111111;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 /6%);
+  display: inline;
+}
+/* .newform_login_btn:disabled,
+button[disabled]
+{
   
+    
+} */

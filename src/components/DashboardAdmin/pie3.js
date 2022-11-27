@@ -50,7 +50,7 @@ useEffect(() => {
   
    return (
     <div className="chart"> 
-  <span> State Status of requests fulfilled</span>
+  <h3> State Status of requests fulfilled</h3>
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}

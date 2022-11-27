@@ -9,7 +9,10 @@
     transition: all 1s ease;
     padding: 0 7px;
     color: black;
-    /* padding: 0 30px; */
+    padding: 0 30px;
+    /* justify-content:space-between; */
+    row-gap: 10%;
+
   }
   /* logo style*/
   .logo {
@@ -49,16 +52,24 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .navbar-link{
+  .navbar-link-needy{
     margin: 0 15px;
     font-size: 21px;
     font-weight: 500;
     color: #545454;
     cursor: pointer;
     text-decoration: none;
+    padding-right: 10px;
+    align-items: center;
+    margin-left: 50px;
   }
-  .navbar-link:hover{
+  .navbar-link-needy:hover{
     color: var(--main-color);
+  }
+  .navbar-link-needy:focus{
+    background: #545454;
+    color: #fff;
+    padding:5px 20px;
   }
   
   /* style login logout*/
@@ -105,7 +116,7 @@
       justify-content: center;
       padding-left: 50px;
     }
-    .navbar-link{
+    .navbar-link-needy{
       margin: 15px 0;
     }
   }

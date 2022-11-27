@@ -1,5 +1,5 @@
-import React, { useState,useContext } from "react";
-import { useNavigate, Link,Params, useParams } from "react-router-dom";
+import React, {useContext } from "react";
+import { useNavigate} from "react-router-dom";
 import {MdDashboard} from "react-icons/md"
 import {BiUser,BiChat} from "react-icons/bi"
 import {BsXLg,BsCalendar2Check,BsGraphUp,BsMenuButtonWide} from "react-icons/bs"
@@ -9,7 +9,8 @@ import {GrAdd} from "react-icons/gr"
 import { setLogout } from "../../redux/reducers/auth";
 import { useDispatch} from "react-redux";
 import { MyContext } from '../../App'
-
+import "./admin.css";
+import "./admin2.css";
 const Sidebar = () => {
   const { selcet,setselcet} = useContext(MyContext)
   const navigate=useNavigate()
@@ -51,11 +52,11 @@ const Sidebar = () => {
       icon: <ImCalendar/>,
     },
     
-    {
-      title: "Add Campaign",
-      path: "/admin/support",
-      icon: <GrAdd />,
-    }, 
+    // {
+    //   title: "Add Campaign",
+    //   path: "/admin/support",
+    //   icon: <GrAdd />,
+    // }, 
     {
       title: "Log Out",
       path: "/",

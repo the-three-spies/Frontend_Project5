@@ -54,23 +54,21 @@ const Contact = () => {
       <div className="contact-body">
         <div className="contact-section">
           <div className="contact-info">
-            <div>
+            <div class="contact_info_menue">
               <i class="bi bi-geo-alt-fill"></i>Amman, Amman, Jordan
             </div>
-            <div>
+            <div class="contact_info_menue">
               <i class="bi bi-envelope-fill"></i>fitratinsancommunity@gmail.com
             </div>
-            <div>
-              <i class="bi bi-telephone-fill"></i>+123 456 789
+            <div class="contact_info_menue">
+              <i class="bi bi-telephone-fill"></i>+962 770508989
             </div>
-            <div>
+            <div class="contact_info_menue">
               <i class="bi bi-clock-fill"></i>Sun -Fri 8:00 Am to 5:00 pm
             </div>
           </div>
           <div className="contact-form">
             <h2>Contact Us</h2>
-            {/* <h2>We'd love to hear from you.</h2> */}
-            {/* <form className="contact" action="" method="post"  >  */}
             <form
               className="contact"
               action=""
@@ -113,6 +111,3 @@ const Contact = () => {
   );
 };
 export default Contact;
-// NOTE : still need
-// 1.vaildition [ALERT MESSAGE]
-// 2.map
